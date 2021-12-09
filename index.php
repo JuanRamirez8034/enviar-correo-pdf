@@ -1,3 +1,8 @@
+<?php 
+session_start();
+error_reporting(0);
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +18,7 @@
 <body id="fondo">
 	
 	<div class="container-sm col-4 mx-auto bg-light opacity-75 py-4 px-5 mt-4">
-		<?php include('./assets/login.php');?>
-		<form action="" method="POST" class="form-signin">
+		<form action="./assets/login.php" method="POST" class="form-signin">
 			<p class="login-text text-center" style="font-size: 2rem; font-weight: 800;">Login</p>
 			<div class="input-group">
 				<input type="email" class="form-control mt-2" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
@@ -30,5 +34,6 @@
 			</div>
 		</form>
 	</div>
+
 </body>
 </html>

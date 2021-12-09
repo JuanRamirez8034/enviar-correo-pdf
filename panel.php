@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 if(!isset($_SESSION['username'])){
@@ -19,7 +18,7 @@ if(!isset($_SESSION['username'])){
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Document</title>
 </head>
-<body >
+<body id="fondo">
     <!-- Navegacion  -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4">
         <div class="container-fluid">
@@ -30,11 +29,11 @@ if(!isset($_SESSION['username'])){
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item"><a href="panel.php" class="nav-link text-black fw-bolder fst-italic btn-warning rounded-2"><img src="img/ico/send.png" alt="" style="width: 20px; height: 20px;" class="align-top"> Enviar</a></li>
-                <li class="nav-item"><a href="logout.php" class="nav-link text-black fw-bolder fst-italic btn-primary rounded-2 mx-2"><img src="img/ico/apagar.png" alt="" style="width: 20px; height: 20px;" class="align-top">  <?php echo $usuario ;?></a></li>
+                <li class="nav-item"><a href="./assets/logout.php" class="nav-link text-black fw-bolder fst-italic btn-primary rounded-2 mx-2"><img src="img/ico/apagar.png" alt="" style="width: 20px; height: 20px;" class="align-top">  <?php echo $usuario ;?></a></li>
             </ul>
         </div>        
       </nav>
-    <div class="container-fluid"id="fondo" style="min-height: 700px;">
+    <div class="container-fluid" style="min-height: 700px;">
         <h1 class="fs-1 fw-bolder font-monospace text-center py-4 text-light">BIENVENIDO A SU CUENTA</h1>
         <section class="form_wrap">
 
@@ -70,8 +69,23 @@ if(!isset($_SESSION['username'])){
         </form>
 
     </section>
+        
     </div>
-
+    	 <!--Footer-->
+        <div class="bg-dark container-fluid pt-4">
+            <div class="row align-items-center">
+              
+                <div class="container-fluid p-2 bg-gradient text-center mb-4">
+                    <span class="text-white fw-lighter">2021 &copy; Todos los derechos reservados<br><p class="fst-italic">Juan Ramirez</p></span>
+                </div>
+            </div>
+        </div> 
+        <!--Scripts-->
+        <!--Jquery-->
+        <!--<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>-->
+        <script src="js/jquery-3.6.0.slim.js"></script>
+        <!--bootstrap js-->
+        <script src="js/bootstrap.js"></script>
        
 </body>
 </html>
